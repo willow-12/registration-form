@@ -1,88 +1,78 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #eef1f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #1e293b, #020617);
+    color: #f8fafc;
 }
 
 /* CONTAINER */
 .container {
-    background: #fff;
+    width: 420px;
+    margin: 80px auto;
     padding: 30px;
-    border-radius: 12px;
-    width: 750px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 40px rgba(167,139,250,0.2);
 }
 
-h2 {
+/* TITLE */
+.glow {
     text-align: center;
-    margin-bottom: 25px;
-}
-
-/* ROW LAYOUT */
-.row {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-/* INPUT GROUP */
-.input-group {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-/* LABEL */
-label {
-    margin-bottom: 6px;
-    font-weight: 500;
+    background: linear-gradient(90deg, #a78bfa, #f472b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* INPUTS */
-input[type="text"],
-select,
-textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+input, select, textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255,255,255,0.08);
+    color: white;
 }
 
-/* TEXTAREA SIZE */
-textarea {
-    height: 100px;
-    resize: none;
+input::placeholder,
+textarea::placeholder {
+    color: #94a3b8;
 }
 
-/* OPTIONS (radio + checkbox) */
-.options label {
+/* GROUPS */
+.group {
+    margin: 10px 0;
+}
+
+.group p {
+    margin-bottom: 5px;
+    color: #cbd5f5;
+}
+
+.group label {
     display: block;
     margin-bottom: 5px;
-    font-weight: normal;
 }
 
 /* BUTTONS */
-.buttons {
-    text-align: center;
-    margin-top: 15px;
-}
-
 button {
-    padding: 10px 20px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #a78bfa, #f472b6);
+    color: white;
     cursor: pointer;
-    margin: 5px;
+    transition: 0.3s;
 }
 
-.btn-primary {
-    background: #007bff;
-    color: white;
+button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(244,114,182,0.6);
 }
 
-.btn-danger {
-    background: #dc3545;
-    color: white;
+.clear {
+    background: rgba(255,255,255,0.1);
 }
