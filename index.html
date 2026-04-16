@@ -1,75 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Registration Form</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div class="container">
-    <h2>Registration Form</h2>
+    <h2 class="glow">Register ✨</h2>
 
     <form id="regForm" action="process.php" method="POST">
 
-        <!-- TOP ROW -->
-        <div class="row">
-            <div class="input-group">
-                <label>First Name</label>
-                <input type="text" name="first_name" id="firstName">
-            </div>
+        <input type="text" name="first_name" id="firstName" placeholder="First Name">
+        <input type="text" name="last_name" id="lastName" placeholder="Last Name">
 
-            <div class="input-group">
-                <label>Last Name</label>
-                <input type="text" name="last_name" id="lastName">
-            </div>
+        <select name="department">
+            <option>Computer Science</option>
+            <option>Software Engineering</option>
+        </select>
 
-            <div class="input-group">
-                <label>Department</label>
-                <select name="department">
-                    <option>Computer Science</option>
-                    <option>Software Engineering</option>
-                </select>
-            </div>
+        <div class="group">
+            <p>Gender</p>
+            <label><input type="radio" name="gender" value="Male"> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+            <label><input type="radio" name="gender" value="Other"> Other</label>
         </div>
 
-        <!-- SECOND ROW -->
-        <div class="row">
-
-            <!-- Gender -->
-            <div class="input-group">
-                <label>Gender</label>
-                <div class="options">
-                    <label><input type="radio" name="gender" value="Male"> Male</label>
-                    <label><input type="radio" name="gender" value="Female"> Female</label>
-                    <label><input type="radio" name="gender" value="Other"> Other</label>
-                </div>
-            </div>
-
-            <!-- Hobbies -->
-            <div class="input-group">
-                <label>Hobbies</label>
-                <div class="options">
-                    <label><input type="checkbox" name="hobbies[]" value="Reading"> Reading</label>
-                    <label><input type="checkbox" name="hobbies[]" value="Sports"> Sports</label>
-                    <label><input type="checkbox" name="hobbies[]" value="Music"> Music</label>
-                    <label><input type="checkbox" name="hobbies[]" value="Travel"> Travel</label>
-                </div>
-            </div>
-
-            <!-- Others -->
-            <div class="input-group">
-                <label>Others</label>
-                <textarea name="others"></textarea>
-            </div>
-
+        <div class="group">
+            <p>Hobbies</p>
+            <label><input type="checkbox" name="hobbies[]" value="Reading"> Reading</label>
+            <label><input type="checkbox" name="hobbies[]" value="Sports"> Sports</label>
+            <label><input type="checkbox" name="hobbies[]" value="Music"> Music</label>
         </div>
 
-        <!-- BUTTONS -->
-        <div class="buttons">
-            <button type="submit" class="btn-primary">Register</button>
-            <button type="reset" class="btn-danger">Clear</button>
-        </div>
+        <textarea name="others" placeholder="Others"></textarea>
+
+        <button type="submit">Register</button>
+        <button type="reset" class="clear">Clear</button>
 
     </form>
 </div>
